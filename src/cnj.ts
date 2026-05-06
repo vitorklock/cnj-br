@@ -1,6 +1,6 @@
-import { Processo, Segment, SEGMENTS } from "./entities";
+import { Processo, Segment } from "./entities";
 import { InvalidProcessoError } from "./errors";
-import { format, FormatOptions, hasValidCheckDigits, parse } from "./utils";
+import { format, FormatOptions, getSegmentInfo, hasValidCheckDigits, parse } from "./utils";
 
 export class Cnj {
     readonly components: Processo.Components;
@@ -30,7 +30,7 @@ export class Cnj {
     }
 
     get segmentInfo(): Segment.Info {
-        return SEGMENTS[this.components.segment as Segment.Codes];
+        return getSegmentInfo(this.components.segment)!;
     }
 
     format(options?: FormatOptions): string {
