@@ -23,6 +23,14 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
 
       - run: pnpm install --frozen-lockfile
+
+      - name: Verify tag is on main branch
+        run: |
+          git fetch origin main
+          git merge-base --is-ancestor ${{ github.sha }} origin/main || \
+            (echo "Tag does not point to a commit on main" >&2 && exit 1)
+
+      - run: pnpm test
       - run: pnpm build
 
       - name: Verify tag matches package.json version

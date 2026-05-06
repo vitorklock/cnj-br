@@ -1,54 +1,56 @@
 {
-    "name": "cnj-br",
-    "version": "0.1.0",
-    "description": "Utilities for the Brazilian CNJ (Conselho Nacional de Justiça) processo numbering system.",
-    "keywords": [
-        "cnj",
-        "brasil",
-        "processo",
-        "judicial",
-        "validation"
-    ],
-    "license": "MIT",
-    "author": "Vítor L Klock",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/vitorklock/cnj-br.git"
-    },
-    "bugs": {
-        "url": "https://github.com/vitorklock/cnj-br/issues"
-    },
-    "homepage": "https://github.com/vitorklock/cnj-br#readme",
-    "main": "dist/index.js",
-    "types": "dist/index.d.ts",
-    "files": [
-        "dist",
-        "README.md",
-        "LICENSE"
-    ],
-    "scripts": {
-        "build": "tsc && tsc-alias",
-        "test": "vitest run",
-        "test:watch": "vitest",
-        "test:coverage": "vitest run --coverage",
-        "lint": "eslint src",
-        "prepublishOnly": "pnpm build",
-        "watch:publish": "tsc-alias && yalc publish --replace",
-        "watch": "tsc-watch --onSuccess \"pnpm run watch:publish\""
-    },
-    "publishConfig": {
-        "access": "public"
-    },
-    "packageManager": "pnpm@10.33.4",
-    "devDependencies": {
-        "@eslint/js": "^9.39.4",
-        "@types/node": "^25.6.0",
-        "@vitest/coverage-v8": "^3.2.4",
-        "eslint": "^9.39.4",
-        "tsc-alias": "^1.8.17",
-        "tsc-watch": "^7.2.0",
-        "typescript": "^5.9.3",
-        "typescript-eslint": "^8.59.0",
-        "vitest": "^3.2.4"
-    }
+  "name": "cnj-br",
+  "version": "0.1.0",
+  "description": "Utilities for the Brazilian CNJ (Conselho Nacional de Justiça) processo numbering system.",
+  "keywords": [
+    "cnj",
+    "brasil",
+    "processo",
+    "judicial",
+    "validation"
+  ],
+  "license": "MIT",
+  "author": "Vítor L Klock",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitorklock/cnj-br.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vitorklock/cnj-br/issues"
+  },
+  "homepage": "https://github.com/vitorklock/cnj-br#readme",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc && tsc-alias",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint src",
+    "prepublishOnly": "pnpm build",
+    "watch:publish": "tsc-alias && yalc publish --replace",
+    "watch": "tsc-watch --onSuccess \"pnpm run watch:publish\"",
+    "prepare": "husky"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "packageManager": "pnpm@10.33.4",
+  "devDependencies": {
+    "@eslint/js": "^9.39.4",
+    "@types/node": "^25.6.0",
+    "@vitest/coverage-v8": "^3.2.4",
+    "eslint": "^9.39.4",
+    "husky": "^9.1.7",
+    "tsc-alias": "^1.8.17",
+    "tsc-watch": "^7.2.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.59.0",
+    "vitest": "^3.2.4"
+  }
 }
