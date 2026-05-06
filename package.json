@@ -19,7 +19,6 @@
         "url": "https://github.com/vitorklock/cnj-br/issues"
     },
     "homepage": "https://github.com/vitorklock/cnj-br#readme",
-    "type": "module",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "files": [
@@ -28,10 +27,12 @@
         "LICENSE"
     ],
     "scripts": {
-        "build": "tsc",
+        "build": "tsc && tsc-alias",
         "test": "vitest run --passWithNoTests",
         "lint": "eslint src",
-        "prepublishOnly": "pnpm build"
+        "prepublishOnly": "pnpm build",
+        "watch:publish": "tsc-alias && yalc publish --replace",
+        "watch": "tsc-watch --onSuccess \"pnpm run watch:publish\""
     },
     "publishConfig": {
         "access": "public"
@@ -40,6 +41,8 @@
     "devDependencies": {
         "@eslint/js": "^9.39.4",
         "eslint": "^9.39.4",
+        "tsc-alias": "^1.8.17",
+        "tsc-watch": "^7.2.0",
         "typescript": "^5.9.3",
         "typescript-eslint": "^8.59.0",
         "vitest": "^2.1.0"
