@@ -1,0 +1,47 @@
+{
+    "name": "cnj-br",
+    "version": "0.0.0",
+    "description": "Utilities for the Brazilian CNJ (Conselho Nacional de Justiça) processo numbering system.",
+    "keywords": [
+        "cnj",
+        "brasil",
+        "processo",
+        "judicial",
+        "validation"
+    ],
+    "license": "MIT",
+    "author": "Vítor L Klock",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/klockvitor/cnj-br.git"
+    },
+    "bugs": {
+        "url": "https://github.com/klockvitor/cnj-br/issues"
+    },
+    "homepage": "https://github.com/klockvitor/cnj-br#readme",
+    "type": "module",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "files": [
+        "dist",
+        "README.md",
+        "LICENSE"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "test": "vitest run --passWithNoTests",
+        "lint": "eslint src",
+        "prepublishOnly": "pnpm build"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "packageManager": "pnpm@10.33.4",
+    "devDependencies": {
+        "@eslint/js": "^9.39.4",
+        "eslint": "^9.39.4",
+        "typescript": "^5.9.3",
+        "typescript-eslint": "^8.59.0",
+        "vitest": "^2.1.0"
+    }
+}
