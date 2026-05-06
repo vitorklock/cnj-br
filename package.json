@@ -13,12 +13,12 @@
     "author": "Vítor L Klock",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/klockvitor/cnj-br.git"
+        "url": "git+https://github.com/vitorklock/cnj-br.git"
     },
     "bugs": {
-        "url": "https://github.com/klockvitor/cnj-br/issues"
+        "url": "https://github.com/vitorklock/cnj-br/issues"
     },
-    "homepage": "https://github.com/klockvitor/cnj-br#readme",
+    "homepage": "https://github.com/vitorklock/cnj-br#readme",
     "type": "module",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
