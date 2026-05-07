@@ -4,7 +4,7 @@
 [![build](https://github.com/vitorklock/cnj-br/actions/workflows/ci.yml/badge.svg)](https://github.com/vitorklock/cnj-br/actions/workflows/ci.yml)
 [![Maintainability](https://qlty.sh/gh/vitorklock/projects/cnj-br/maintainability.svg)](https://qlty.sh/gh/vitorklock/projects/cnj-br)
 [![issues](https://img.shields.io/github/issues/vitorklock/cnj-br)](https://github.com/vitorklock/cnj-br/issues)
-[![license](https://img.shields.io/github/license/vitorklock/cnj-br)](./LICENSE)
+[![license](https://img.shields.io/badge/license-MIT-blue)](./LICENSE)
 
 Parse, validate, format, and inspect Brazilian CNJ processo numbers.
 
