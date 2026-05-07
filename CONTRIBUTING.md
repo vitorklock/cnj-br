@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for thinking about contributing to `cnj-br`. Bug reports, fixes, new features, docs improvements, and questions are all welcome — you don't need permission to open an issue or a PR. For larger changes (new features, breaking API changes), opening an issue first is a good idea so we can talk through the design before you spend time on the implementation.
+Thanks for thinking about contributing to `cnj-br`. Bug reports, fixes, new features, docs improvements, and questions are all welcome - you don't need permission to open an issue or a PR. For larger changes (new features, breaking API changes), opening an issue first is a good idea so we can talk through the design before you spend time on the implementation.
 
 ## Dev setup
 
@@ -24,15 +24,15 @@ pnpm lint           # ESLint
 pnpm build          # type-check and emit dist/
 ```
 
-CI runs `pnpm test` and `pnpm lint` on every PR — both must pass before a PR can be merged.
+CI runs `pnpm test` and `pnpm lint` on every PR - both must pass before a PR can be merged.
 
 ## Making a change
 
-Fork the repo, branch off `main`, and open a PR back to `main`. Keep PRs focused on one logical change — it makes review faster and revertible if something goes sideways. If your PR addresses an issue, write `Closes #123` in the description so it auto-closes on merge.
+Fork the repo, branch off `main`, and open a PR back to `main`. Keep PRs focused on one logical change - it makes review faster and revertible if something goes sideways. If your PR addresses an issue, write `Closes #123` in the description so it auto-closes on merge.
 
 ## Tests
 
-New features should come with tests under `src/tests/unit/`. Bug fixes should come with a regression test that fails before your fix and passes after. Look at [src/tests/unit/cnj.spec.ts](./src/tests/unit/cnj.spec.ts) for the style — vitest globals, one `describe` per unit, `it('should …')` per case.
+New features should come with tests under `src/tests/unit/`. Bug fixes should come with a regression test that fails before your fix and passes after. Look at [src/tests/unit/cnj.spec.ts](./src/tests/unit/cnj.spec.ts) for the style - vitest globals, one `describe` per unit, `it('should …')` per case.
 
 ## Reporting bugs
 
@@ -47,7 +47,7 @@ A failing test case in the repro is the fastest path to a fix.
 
 ## Suggesting a feature
 
-Open an issue describing the use case before you build it. There might already be a way to do it, or we might want to design the API together — either way, a quick chat saves you time.
+Open an issue describing the use case before you build it. There might already be a way to do it, or we might want to design the API together - either way, a quick chat saves you time.
 
 ## Review process
 

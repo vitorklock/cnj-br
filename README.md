@@ -14,7 +14,7 @@ yarn add cnj-br
 
 ## Usage
 
-The `Cnj` class is the ergonomic entry point. Pass it a formatted or 20-digit processo number; it parses and validates in the constructor.
+The `Cnj` class is an ergonomic entry point. Pass it a formatted or digit-only processo number; it parses and validates in the constructor.
 
 ```ts
 import { Cnj } from 'cnj-br'
@@ -23,7 +23,6 @@ const cnj = new Cnj('0000001-45.2024.8.26.0001')
 // or: new Cnj('00000014520248260001')
 
 cnj.format()                      // '0000001-45.2024.8.26.0001'
-cnj.format({ formatted: false })  // '00000014520248260001'
 cnj.raw                           // '00000014520248260001'
 cnj.segmentInfo                   // { code: 'TJ', name: 'Justiça Estadual' }
 cnj.components                    // { sequentialNumber, checkDigits, year, segment, court, originUnit }
@@ -31,7 +30,7 @@ cnj.components                    // { sequentialNumber, checkDigits, year, segm
 JSON.stringify(cnj)               // serializes the components
 ```
 
-For form validation and similar "is this user input valid?" checks, use the static helpers — they don't throw.
+For form validation, use the static helpers - they don't throw.
 
 ```ts
 Cnj.isValid('0000001-45.2024.8.26.0001')  // true
@@ -70,18 +69,18 @@ calculateCheckDigits({                      // returns '45'
 hasValidCheckDigits(components)             // boolean
 
 getSegmentInfo('8')   // { code: 'TJ', name: 'Justiça Estadual' }
-getSegmentInfo(8)     // same — number or string both work
+getSegmentInfo(8)     // same - number or string both work
 getSegmentInfo('99')  // null
 ```
 
 ## Error handling
 
-There are three ways to handle invalid input — pick the one that fits your call site.
+There are three ways to handle invalid input - pick the one that fits your call site.
 
 ```ts
 import { Cnj, InvalidProcessoError } from 'cnj-br'
 
-// 1. Constructor throws — good when invalid input is exceptional
+// 1. Constructor throws
 try {
     const cnj = new Cnj(input)
 } catch (err) {
@@ -90,10 +89,10 @@ try {
     }
 }
 
-// 2. isValid returns a boolean — good for guards
+// 2. isValid returns a boolean
 if (Cnj.isValid(input)) { /* ... */ }
 
-// 3. safeParse returns Cnj | null — good when you want the parsed value if valid
+// 3. safeParse returns Cnj | null
 const cnj = Cnj.safeParse(input)
 if (cnj) { /* ... */ }
 ```
@@ -115,7 +114,7 @@ namespace Processo {
 }
 ```
 
-Segment digits map to: `1` STF, `2` CNJ, `3` STJ, `4` Justiça Federal, `5` Justiça do Trabalho, `6` Justiça Eleitoral, `7` Justiça Militar da União, `8` Justiça Estadual, `9` Justiça Militar Estadual.
+Segment digits map to their relative entity: `1` STF, `2` CNJ, `3` STJ, `4` Justiça Federal, `5` Justiça do Trabalho, `6` Justiça Eleitoral, `7` Justiça Militar da União, `8` Justiça Estadual, `9` Justiça Militar Estadual.
 
 ## About the format
 
