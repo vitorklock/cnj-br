@@ -1,6 +1,6 @@
 {
   "name": "cnj-br",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Utilities for the Brazilian CNJ (Conselho Nacional de Justiça) processo numbering system.",
   "keywords": [
     "cnj",
