@@ -2,7 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/cnj-br)](https://www.npmjs.com/package/cnj-br)
 [![build](https://github.com/vitorklock/cnj-br/actions/workflows/ci.yml/badge.svg)](https://github.com/vitorklock/cnj-br/actions/workflows/ci.yml)
-[![maintainability](https://api.codeclimate.com/v1/badges/qltcp_OllQMmqAFZma76hB/maintainability)](https://codeclimate.com/github/vitorklock/cnj-br/maintainability)
+[![Maintainability](https://qlty.sh/gh/vitorklock/projects/cnj-br/maintainability.svg)](https://qlty.sh/gh/vitorklock/projects/cnj-br)
 [![issues](https://img.shields.io/github/issues/vitorklock/cnj-br)](https://github.com/vitorklock/cnj-br/issues)
 [![license](https://img.shields.io/github/license/vitorklock/cnj-br)](./LICENSE)
 
