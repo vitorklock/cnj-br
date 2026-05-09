@@ -2,6 +2,8 @@
     "compilerOptions": {
         "target": "ES2021",
         "module": "nodenext",
+        "declaration": true,
+        "declarationMap": true,
         "sourceMap": true,
         "strict": true,
         "moduleResolution": "nodenext",
@@ -13,9 +15,7 @@
         "resolveJsonModule": true,
         "isolatedModules": true,
         "strictPropertyInitialization": false,
-        "rootDirs": [
-            "src/"
-        ],
+        "rootDir": "./src",
         "outDir": "dist/",
         "paths": {
             "@/*": [
@@ -24,10 +24,10 @@
         }
     },
     "include": [
-        "src",
-        "vitest.config.ts"
+        "src"
     ],
     "exclude": [
-        "src/node_modules/*"
+        "src/node_modules/*",
+        "src/tests/**"
     ]
 }
