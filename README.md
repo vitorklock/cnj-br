@@ -56,6 +56,7 @@ If you only need a single operation and don't want to instantiate a class, use t
 import {
     parse,
     format,
+    mask,
     calculateCheckDigits,
     hasValidCheckDigits,
     getSegmentInfo,
@@ -77,6 +78,13 @@ hasValidCheckDigits(components)             // boolean
 getSegmentInfo('8')   // { code: 'TJ', name: 'Justiça Estadual' }
 getSegmentInfo(8)     // same - number or string both work
 getSegmentInfo('99')  // null
+```
+
+`mask` is a progressive input formatter — feed it the raw digits the user has typed so far and it returns the canonical formatted prefix. Useful for `<input onChange>` handlers.
+
+```ts
+mask('00000014520')          // '0000001-45.20'
+mask('00000014520248260001') // '0000001-45.2024.8.26.0001'
 ```
 
 ## Error handling
