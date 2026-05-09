@@ -1,4 +1,4 @@
-export function mask(value: string): string {
+export function mask(value: string | number): string {
     const digits = String(value).replace(/\D/g, '').slice(0, 20)
 
     let result = digits.slice(0, 7)
